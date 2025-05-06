@@ -1,0 +1,10 @@
+{
+  "name": "puppeteer-ghpages-render",
+  "version": "1.0.0",
+  "scripts": {
+    "render": "node render.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.3.8"
+  }
+}
