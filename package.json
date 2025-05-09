@@ -1,10 +1,27 @@
 {
-  "name": "puppeteer-ghpages-render",
+  "name": "nightwatch-docs-rendered",
   "version": "1.0.0",
+  "description": "A tool to crawl and render the Nightwatch.js documentation website as static HTML",
   "scripts": {
-    "render": "node render.js"
+    "render": "node render.js",
+    "test": "node render.js --test"
   },
   "dependencies": {
-    "puppeteer": "^21.3.8"
-  }
+    "puppeteer": "^22.8.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nightwatch-docs-rendered"
+  },
+  "keywords": [
+    "nightwatch",
+    "documentation",
+    "static-site",
+    "puppeteer"
+  ],
+  "author": "",
+  "license": "MIT"
 }

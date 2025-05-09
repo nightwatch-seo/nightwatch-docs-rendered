@@ -1,8 +1,11 @@
-name: Render & Deploy Headless Page
+name: Render & Deploy Headless Website
 
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '0 0 * * 0'  # Run weekly on Sundays at midnight
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
   render_and_deploy:
@@ -22,10 +25,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Render page with Puppeteer
+      - name: Render website with Puppeteer
         run: npm run render
         env:
           TARGET_URL: 'https://docs.nightwatch.io'  # Or use a GitHub secret here
+          MAX_PAGES: 500  # Adjust based on your needs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
