@@ -30,6 +30,7 @@ jobs:
         env:
           TARGET_URL: 'https://docs.nightwatch.io'  # Or use a GitHub secret here
           MAX_PAGES: 500  # Adjust based on your needs
+          DOWNLOAD_EXTERNAL: 'true'  # Download external resources for offline use
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
